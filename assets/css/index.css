@@ -1,0 +1,214 @@
+/* código general para quitar bordes, espacios y establecer el tipo y tamaño de fuente*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+/*codigo para estetica géneral/responsiva*/
+
+/* Clase padre */
+.padre{
+    display: flex; /*Establecer la propiedad flex en todas las demás box heredadas*/
+    flex-flow: column nowrap;
+}
+/* Extra de margenes*/
+.margen{
+    padding: 0 50px;
+}
+
+/* Código superior de la página */
+    .top{
+        background: url(../image/hero.png); /*Fondo superior del hero*/
+        background-position: center; /* Centrar posición del box .top*/
+        background-attachment: contain;
+        background-size: cover;
+
+        display: flex;
+        flex-flow: column nowrap; /*establecer la barra y el hero como columnas*/
+    }
+        /* Coso de barra-variables */
+        .barra{
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-flow: row nowrap; /*establecer las variables de la barra para que no se formen columnas*/
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /*color de borde de barra*/
+
+            height: 60px; /*establecer tamaño*/
+
+            align-items: center;
+        }
+            .logo{
+                flex: 2 1 auto;   /*establecer la distribución de la variable*/
+            }
+                .logo a{
+                    color: #fff;
+                    text-decoration: none; /*quitar propiedades determinadas; como lineas decorativas*/
+                }
+                .logo a:hover{
+                    color: #fc2323;
+                    background-color: rgb(115, 0, 124);
+                    transition: .5s;
+                }
+
+            .barra-contenido{
+                flex: 2 1 auto; /*establecer la distribución de la variable*/
+                padding: 0 10px;
+                letter-spacing: 2px; /*establecer el espacio*/
+
+            }
+                .barra-contenido a{
+                    color: #fff;
+                    text-decoration: none;
+
+                    margin: 10px;
+                }
+                
+                .barra-contenido a:hover{ /*propiedad para que la variable cambie al pasar el cursor*/
+                    color: #EA5455;
+                    background-color: rgb(115, 0, 124);
+                    transition: .5s;
+                }
+
+            .barra-log a{
+                color: #fff;
+                text-decoration: none;
+            }
+                .barra-log a:hover{
+                    color: #EA5455;
+                    background-color: rgb(115, 0, 124);
+                    transition: .5s;
+                }
+                
+            /* Coso de barra-principal */
+        .texto-principal{
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 640px;
+            display: flex;
+            align-items: center; /* alinear contenido*/
+            justify-content: center; /*centrar contenido*/
+        }
+            .barra-principal_1{
+                color: #fff;
+                text-align: center; /*alinear texto*/
+            }
+                .barra-principal_1 a:hover{
+                    color: #EA5455;
+                }
+/* Código principal de la página */
+    .mid{
+        background-color: #fff;
+        display: flex;
+        justify-content: center; /*centrar contenido*/
+        align-items: center; /* alinear contenido*/
+        
+    }
+        .section-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* alinear contenido*/
+            justify-content: center; /*centrar contenido*/
+        }
+            .contenido{
+                margin: 20px;
+                text-align: center; /*alinear texto*/
+            }
+            
+
+/* Código inferior de la página */
+    .bottom{
+        display: flex;
+        justify-content: center; /*centrar contenido*/
+    }
+        .texto-final{
+            text-align: center; /*alinear texto*/
+        }
+
+
+/* código Responsivo */
+
+/*establecer cambios de código cuando la pantalla tiene un ancho de 948px*/
+@media all and(max-width:948px) {
+    .mid{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+    .section-1{
+        display: flex;
+        justify-content: center;
+    }
+    .barra-principal_1{
+        font-size: 15px;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 600px*/
+@media all and(max-width:600px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 400px*/
+@media all and(max-width:400px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* codigo Extra */
+
+/* Diseño de Tabla */
+table{
+    width: 100%; /*establecer tamaño a usar*/
+}
+    th, td{
+        width: 90%; /*establecer tamaño a usar*/
+    }
+
+    .refe{
+        border: 1px solid #696767;
+        text-align: left; /*establecer alineación*/
+        border-spacing: 0; /*establecer tamaño del espacio de bordes*/
+        padding: 1px;
+        border-radius: 5px; /*redondear el borde*/
+    }
+    th{
+        background: #EA5455;
+        color: #fff;
+    }
+    .th{
+        border: #EA5455;
+        text-align: center;
+        border-radius: 10px; /*redondear el borde*/
+    }
+    .titulo, th, td{
+        font-size: 18px;
+    }
+    .contenido:hover{
+        background: #eb8787;
+        border-radius: 20px;
+    }
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50px; /*redondear el borde*/
+}
+
+    .imgp{
+        height: 200px;
+        width: 150px;
+    } 

@@ -1,0 +1,188 @@
+/* código general para quitar bordes, espacios y establecer el tipo y tamaño de fuente*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+/*codigo para estetica géneral/responsiva*/
+
+/* Clase padre */
+.padre{
+    background: url(../image/hero.png); /*Fondo superior del hero*/
+        background-position: center; /* Centrar posición del box .top*/
+        background-attachment: contain;
+        background-size: cover;
+
+    display: flex; /*Establecer la propiedad flex en todas las demás box heredadas*/
+    flex-flow: column nowrap;
+}
+/* Extra de margenes*/
+.margen{
+    padding: 0 50px;
+}
+
+/* Código superior de la página */
+    .top{
+        
+
+        display: flex;
+        flex-flow: column nowrap; /*establecer la barra y el hero como columnas*/
+    }
+        /* Coso de barra-variables */
+        .barra{
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-flow: row nowrap; /*establecer las variables de la barra para que no se formen columnas*/
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /*color de borde de barra*/
+
+            height: 60px; /*establecer tamaño*/
+
+            align-items: center;
+            justify-content: center;
+        }
+            .barra-contenido{
+                /* flex: 1 1 auto; establecer la distribución de la variable */
+                display: flex;
+                padding: 0 10px;
+                letter-spacing: 2px; /*establecer el espacio*/    
+            }
+                .barra-contenido h1{ /*propiedad para que la variable cambie al pasar el cursor*/
+                    color: #fff;
+                }
+            /* Coso de barra-principal */
+        .texto-principal{
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 650px;
+            display: flex;
+            align-items: center; /* alinear contenido*/
+            justify-content: center; /*centrar contenido*/
+        }
+            .barra-principal_1{
+                color: #fff;
+                text-align: center; /*alinear texto*/
+            }
+                .barra-principal_1 a:hover{
+                    color: #EA5455;
+                }
+/* Código principal de la página */
+.mid{
+    display: flex;
+    justify-content: center; /*centrar contenido*/
+    align-items: center; /* alinear contenido*/
+    
+} 
+    .section-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* alinear contenido*/
+        justify-content: center; /*centrar contenido*/
+
+    }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            
+            label {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+            
+            input, textarea {
+                margin-bottom: 0px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                font-size: 16px;
+                
+            }
+            
+            .button {
+                margin-top: 30px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                background-color: #162385;
+                color: white;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: #EA5455;
+            }   
+/* Código inferior de la página */
+    .bottom{
+        display: flex;
+        justify-content: center; /*centrar contenido*/
+    }
+        .texto-final{
+            text-align: center; /*alinear texto*/
+        }
+
+
+/* código Responsivo */
+
+/*establecer cambios de código cuando la pantalla tiene un ancho de 948px*/
+@media all and(max-width:948px) {
+    .mid{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+    .section-1{
+        display: flex;
+        justify-content: center;
+    }
+    .barra-principal_1{
+        font-size: 15px;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 600px*/
+@media all and(max-width:600px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
+/*establecer cambios de código cuando la pantalla tiene un ancho de 400px*/
+@media all and(max-width:400px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .barra{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* codigo Extra */
+.titulo{
+    background-color: rgb(106, 0, 255);
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.formv{
+    background-color: rgba(54, 2, 103, 0.271);
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.titulo, .formv, .formva{
+    color: #fff;
+}
+input{
+    width: 400px;
+}

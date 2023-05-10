@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+  <!-- Código superior de la página -->
+  <div class="padre"> <!-- Clase padre de todo -->
+    <header class="top">
+        <!-- Código de la barra de navegación -->
+        <div class="barra margen">
+            <nav class="barra-contenido">
+                <h1>Sistema de ingreso de datos</h1>
+            </nav>
+        </div>
+        <!-- hero de la página //Presentación con un banner -->
+        <!-- <div class="texto-principal">
+            <h1 class="barra-principal_1">Bienvenido(a), este sistema web está diseñado para el ingreso de datos de clientes.</h2>
+        </div> -->
+    </header>
+
+    <!-- Código principal de la página -->
+    <main class="mid margen">
+        <section class="section-1">
+            <form class="form">
+                <label class="titulo" for="titulo">Formulario de Registro:</label>
+
+                <label class="formv" for="name">Nombres y apellidos:</label>
+                <input type="text" id="name" name="name" required>
+              
+                <label class="formv" for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label class="formv" for="number">Número de contacto:</label>
+                <input type="number" id="number" name="number" required>
+
+                <label class="formv" for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label class="formv" for="identificacion">Identificación:</label>
+                <input type="number" id="identificacion" name="identificacion" required>
+
+                <label class="formv" for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+
+                <label class="formva" for="promocion">Acepta el envío de promociones a su correo:</label>
+                <input type="checkbox" id="promocion" name="promocion">
+
+                <button class="button" type="submit">Enviar</button>
+              </form>
+        </section>
+    </main>
+    <!-- Código inferior de la página -->
+    <footer class="bottom margen">
+        <nav class="texto-final">
+            <h3><i class="fa-sharp fa-solid fa-copyright"></i> Byron Calderón López</h3>
+            
+        </nav>
+    </footer> 
+    <!-- Link js -->
+    <script src="../scripts/index.js"></script> 
+</div>
+</html>
